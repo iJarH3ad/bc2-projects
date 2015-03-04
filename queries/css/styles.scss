@@ -1,0 +1,90 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #669900;
+}
+
+header{ 
+	nav{
+		ul{
+			&:before,
+			&:after {
+				content: "";
+				display: block;
+				clear: both;
+				
+			}
+			li{
+				display: inline-block;
+				float: left;
+				width: 25%;
+			}
+		}
+	}
+}
+main {
+	section:first-of-type {
+		background-image: url("http://img0.ndsstatic.com/wallpapers/d94873f6b984c9a7c9e5dabd6f4bbd05_large.jpeg");
+		background-size: cover;
+		background-position: center;
+
+		div:first-child {
+			width: 25%;
+			color: white;
+			background-color: hsla(0, 0, 0, .5);
+		}
+		div:last-child {
+			widows: 75%;
+		}
+	}
+	section {
+		div {
+			width: 33.3333%;
+			float: left;
+		}
+	}
+	section:last-of-type {
+		div {
+			width: 75%;
+		}
+
+	}
+	section:before,
+	section:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+
+
+@media screen and (max-width: 500px) and (max-width: 756px) {	
+}
+	header:first-of-type {
+		display: none;
+	}
+@media screen and (max-width: 500px){
+	header {
+		nav {
+			ul {	
+				li {
+					display: block;
+					width: 100%;
+					text-align: center;
+					padding: 10px 0;
+				}
+			}
+		}
+	}
+	section {
+		div {
+			width: 100% !important;
+		}
+	}
+	.no-phone {
+		display: none;
+	}
+}
